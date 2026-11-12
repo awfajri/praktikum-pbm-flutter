@@ -47,7 +47,7 @@ class HomeMenuScreen extends StatelessWidget {
       const _MateriItem(
         title: '7. Belajar Ganti FontFamily',
         subtitle: 'Contoh penggunaan Google Fonts untuk mengganti font',
-        routeName: AppRouter.belajarGantiFontFamily,
+        routeName: AppRouter.changeFont,
         icon: Icons.font_download,
       ),
     ];

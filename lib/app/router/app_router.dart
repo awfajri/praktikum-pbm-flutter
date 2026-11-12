@@ -7,7 +7,7 @@ import '../../screens/match_detail_screen.dart';
 import '../../screens/callback_modal_screen.dart';
 import '../../screens/animation_screen.dart';
 import '../../screens/example_onpressed.dart';
-import '../../screens/belajar_ganti_fontfamily.dart';
+import '../../screens/change_font.dart';
 
 class AppRouter {
   // Daftar konstanta nama rute
@@ -19,7 +19,7 @@ class AppRouter {
   static const String callbackModal = '/callback-modal';
   static const String exampleOnpressed = '/example-onpressed';
   static const String animation = '/animation';
-  static const String belajarGantiFontFamily = '/belajar-ganti-fontfamily';
+  static const String changeFont = '/change-font';
 
   // Pemetaan rute ke masing-masing Screen
   static Map<String, WidgetBuilder> get routes => {
@@ -31,6 +31,6 @@ class AppRouter {
     callbackModal: (context) => const CallbackModalScreen(),
     animation: (context) => const AnimationScreen(),
     exampleOnpressed: (context) => const ExampleOnpressed(),
-    belajarGantiFontFamily: (context) => const BelajarGantiFontFamilyScreen(),
+    changeFont: (context) => const change_font(),
   };
 }
