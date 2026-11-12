@@ -38,6 +38,18 @@ class HomeMenuScreen extends StatelessWidget {
         routeName: AppRouter.animation,
         icon: Icons.animation,
       ),
+      const _MateriItem(
+        title: '6. Contoh Callback onPressed',
+        subtitle: 'Contoh sederhana penggunaan callback onPressed',
+        routeName: AppRouter.exampleOnpressed,
+        icon: Icons.touch_app,
+      ),
+      const _MateriItem(
+        title: '7. Belajar Ganti FontFamily',
+        subtitle: 'Contoh penggunaan Google Fonts untuk mengganti font',
+        routeName: AppRouter.belajarGantiFontFamily,
+        icon: Icons.font_download,
+      ),
     ];
 
     return Scaffold(
