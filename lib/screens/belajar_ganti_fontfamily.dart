@@ -7,30 +7,24 @@ class BelajarGantiFontFamilyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        // Menggunakan GoogleFonts langsung di title AppBar
-        title: Text(
-          'Contoh Ganti Font Style',
-          style: GoogleFonts.plusJakartaSans(fontWeight: FontWeight.bold),
-        ),
-        centerTitle: true,
-      ),
-      // Isi utama layar ditaruh di properti 'body' milik Scaffold, bukan di AppBar
+      appBar: AppBar(title: Text('Contoh Ganti Font Style'), centerTitle: true),
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(24.0),
+        child: Container(
+          padding: EdgeInsets.all(16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // 1. Font default global (Poppins dari ThemeData di main.dart)
-              const Text(
+              Text(
                 '1. Ini menggunakan font global (Poppins)',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.green,
+                ),
               ),
               const SizedBox(height: 20),
 
-              // 2. Font Plus Jakarta Sans via package google_fonts
               Text(
                 '2. Ini menggunakan Plus Jakarta Sans',
                 textAlign: TextAlign.center,
@@ -40,18 +34,16 @@ class BelajarGantiFontFamilyScreen extends StatelessWidget {
                   color: Colors.indigo,
                 ),
               ),
-              const SizedBox(height: 20),
-
-              // 3. Font Caveat (tulisan tangan) via package google_fonts
               Text(
-                '3. Ini menggunakan font Caveat',
+                '3. Ini menggunakan Outfit Sans',
                 textAlign: TextAlign.center,
-                style: GoogleFonts.caveat(
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.pink,
+                style: GoogleFonts.outfit(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.orange,
                 ),
               ),
+              const SizedBox(height: 20),
             ],
           ),
         ),
