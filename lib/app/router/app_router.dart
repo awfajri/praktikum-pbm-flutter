@@ -7,7 +7,7 @@ import '../../screens/match_detail_screen.dart';
 import '../../screens/callback_modal_screen.dart';
 import '../../screens/animation_screen.dart';
 import '../../screens/example_onpressed.dart';
-import '../../screens/change_font.dart';
+import '../../screens/change_font_screen.dart.dart';
 
 class AppRouter {
   // Daftar konstanta nama rute
@@ -31,6 +31,6 @@ class AppRouter {
     callbackModal: (context) => const CallbackModalScreen(),
     animation: (context) => const AnimationScreen(),
     exampleOnpressed: (context) => const ExampleOnpressed(),
-    changeFont: (context) => const change_font(),
+    changeFont: (context) => const ChangeFontScreen(),
   };
 }

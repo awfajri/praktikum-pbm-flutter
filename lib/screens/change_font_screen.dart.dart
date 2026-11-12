@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class change_font extends StatefulWidget {
-  const change_font({super.key});
+class ChangeFontScreen extends StatefulWidget {
+  const ChangeFontScreen({super.key});
 
   @override
-  State<change_font> createState() => _ChangeFont();
+  State<ChangeFontScreen> createState() => _ChangeFontScreenState();
 }
 
-class _ChangeFont extends State<change_font> {
-  bool isOutfitFont = true;
+class _ChangeFontScreenState extends State<ChangeFontScreen> {
+  // Variabel state bersifat private (_) untuk menyimpan kondisi font aktif
+  bool _isOutfitFont = true;
 
-  void gantiFont() {
+  // Fungsi toggle untuk membalikkan kondisi font dan memperbarui UI
+  void _gantiFont() {
     setState(() {
-      isOutfitFont = !isOutfitFont;
+      _isOutfitFont = !_isOutfitFont;
     });
   }
 
@@ -25,14 +27,16 @@ class _ChangeFont extends State<change_font> {
         centerTitle: true,
       ),
       body: Center(
-        child: Container(
+        // Menggunakan Padding langsung karena tidak butuh dekorasi/warna latar
+        child: Padding(
           padding: const EdgeInsets.all(24.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Hallo, ini pake font ${isOutfitFont ? 'Outfit' : 'Sora'}',
-                style: isOutfitFont
+                'Hallo, ini pake font ${_isOutfitFont ? 'Outfit' : 'Sora'}',
+                textAlign: TextAlign.center,
+                style: _isOutfitFont
                     ? GoogleFonts.outfit(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -46,7 +50,7 @@ class _ChangeFont extends State<change_font> {
               ),
               const SizedBox(height: 124),
               ElevatedButton(
-                onPressed: gantiFont,
+                onPressed: _gantiFont,
                 child: const Text('Ganti Font'),
               ),
             ],

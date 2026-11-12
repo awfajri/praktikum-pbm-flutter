@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      // Rute awal diarahkan ke menu daftar materi
+      // Rute awalnya di arahin ke home menu screen
       initialRoute: AppRouter.home,
       routes: AppRouter.routes,
     );
